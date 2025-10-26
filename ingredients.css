@@ -1,0 +1,164 @@
+ /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      color: #f8f5f1;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Background image with overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('top-view-arrangement-with-spa-items-wooden-background.jpg'); /* Replace with your preferred image */
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(43, 43, 43, 0.6);
+      z-index: -1;
+    }
+     nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px); /* adds a frosted glass effect */
+    background: rgba(43, 43, 43, 0.3); /* semi-transparent background for nav */
+    border-radius: 10px;
+    margin: 20px;
+  }
+
+    /* Navigation Bar styling */
+    nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #6a7a67;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #6a7a67;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffd3b6;
+}
+
+.search-icon {
+  font-size: 22px;
+  color: #6a7a67;
+  cursor: pointer;
+}
+    /* Main container */
+    .container {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Main header style */
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ffd3b6;
+    }
+
+    /* Ingredients grid styling */
+    .ingredients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    /* Ingredient card styling */
+    .ingredient-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .ingredient-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    }
+
+    .ingredient-image {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .ingredient-name {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #f8f5f1;
+      text-align: center;
+    }
+
+    .ingredient-description {
+      font-size: 1em;
+      line-height: 1.5;
+      color: #f8f5f1;
+      text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 768px) {
+      h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+      .nav-links {
+        justify-content: center;
+      }
+    }
